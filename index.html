@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>SAE calcultatrice</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <div id="pannel">
+            <section>
+                <button onclick="button_click(this);" type="button" value="0">0</button>
+                <button onclick="button_click(this);" type="button" value="1">1</button>
+                <button onclick="button_click(this);" type="button" value="2">2</button>
+                <button onclick="button_click(this);" type="button" value="3">3</button>
+                <button onclick="button_click(this);" type="button" value="4">4</button>
+                <button onclick="button_click(this);" type="button" value="5">5</button>
+                <button onclick="button_click(this);" type="button" value="6">6</button>
+                <button onclick="button_click(this);" type="button" value="7">7</button>
+                <button onclick="button_click(this);" type="button" value="8">8</button>
+                <button onclick="button_click(this);" type="button" value="9">9</button>
+                <button onclick="button_click(this);" type="button" value="+">+</button>
+                <button onclick="button_click(this);" type="button" value="-">-</button>
+                <button onclick="button_click(this);" type="button" value="X">X</button>
+                <button onclick="button_click(this);" type="button" value="/">/</button>
+                <button onclick="button_click(this);" id="inconnue" type="button" value="inconnue">Inconnu x</button>
+                <button onclick="button_click(this);" type="button" value=",">,</button>
+                <button onclick="button_click(this);" type="button" value=".">.</button>
+                <button onclick="button_click(this);" type="button" value="%">%</button>
+                <button onclick="button_click(this);" type="button" value="(">(</button>
+                <button onclick="button_click(this);" type="button" value=")">)</button>
+                <button onclick="button_click(this);" type="button">ax**n</button>
+                <button onclick="button_click(this);" type="button">bx**n</button>
+                <button onclick="button_click(this);" type="button">cx**n-2</button>
+                <br><br>
+                <button onclick="button_click(this);" type="button" value="C">C</button>
+                <button onclick="button_click(this);" type="button" value="EXE">EXE</button>
+                <button onclick="button_click(this);" type="button" value="DEL">DEL</button>
+                <button onclick="button_click(this);" id="zoomIn" type="button" value="ZOOMIn">ZOOM+</button>
+                <button onclick="button_click(this);" id="zoomOut" type="button" value="ZOMMOut">ZOOM-</button>
+            </section>
+            <section>
+                <table>
+                    <tr>
+                        <td>X</td>
+                        <td>f(x)</td>
+                    </tr>
+                    <tr style="display: none;">
+                        <td>
+                            <input type="text" value="0" disabled>
+                        </td>
+                        <td>
+                            <input type="text" value="0" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="first_x" type="text" value="1">
+                        </td>
+                        <td>
+                            <input id="result_x" type="text" value="0" disabled>
+                        </td>
+                    </tr>
+                    <!--<tr>
+                        <td>
+                            <input type="text" value="2">
+                        </td>
+                        <td>
+                            <input type="text" value="0" disabled>
+                        </td>
+                    </tr>-->
+                </table>
+            </section>
+            <section id="info">
+                <h2>Info :</h2>
+                <p>
+                    Si vous souhaiter utiliser le facteur de puissance
+                    vous pouvez simplement écrire deux fois le signe de
+                    multiplication à la suite, vous pouvez mettre le
+                    facteur multiplian entre deux paranthèse à la suite.
+                    <br>Exemple : 2**(8*9)
+                </p>
+                <p>Vous pouvez directement écrire vos fonction avec x,
+                    la courbe se dessine automatiquement.</p>
+                <p>
+                    Si vous cliquer directement dans le graphique, la position cibler sera affichée en haut à gauche.
+                </p>
+                <p>
+                    Le résultat des operations est afficher en haut à droite du graphique.
+                </p>
+            </section>
+        </div>
+        <div id="dessin">
+                <canvas id="canvas">
+                </canvas>
+            <div id="prom-put">
+                <input type="text" value="" style="text-align: right;width: 99.5%;background: black;color: white;" placeholder="Taper ici ->" id="input_">
+                <!--<p id="prompt">0</p>-->
+            </div>
+        </div>
+        <script src="./scripts/math_parser.js" defer></script>
+        <script src="./scripts/canvas.js" defer></script>
+        <script src="./scripts/main.js" defer></script>
+        <script src="./scripts/event.js" defer></script>
+    </body>
+</html>
